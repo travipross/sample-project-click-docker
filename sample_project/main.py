@@ -14,7 +14,7 @@ def cmd1(arg1, arg2):
 @cli.command()
 @click.option("--arga")
 @click.option("--argb")
-def cmd3(arga, argb):
+def cmd2(arga, argb):
     command2(arga=arga, argb=argb)
 
 @cli.command()
