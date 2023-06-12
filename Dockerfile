@@ -1,10 +1,11 @@
 FROM python:3.9
 
-COPY setup.py setup.cfg
-COPY setup.cfg setup.py
+WORKDIR /workdir 
+
+COPY setup.py setup.py
+COPY setup.cfg setup.cfg
 COPY sample_project/ sample_project/
 
-RUN pip install setuptools
-RUN python3 -m pip install ./sample_project
+RUN pip install .
 
 ENTRYPOINT ["sample-project"]
